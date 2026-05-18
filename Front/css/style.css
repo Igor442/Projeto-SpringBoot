@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ececec;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.container{
+    width:900px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    position:relative;
+}
+
+.topo{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.left{
+    display:flex;
+    gap:10px;
+}
+
+.right{
+    display:flex;
+    gap:10px;
+}
+
+input{
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+button{
+    border:none;
+    padding:10px 20px;
+    border-radius:5px;
+    cursor:pointer;
+    color:white;
+    font-weight:bold;
+}
+
+.btn-add{
+    background:#00cc00;
+}
+
+.btn-edit{
+    background:#00a2ff;
+}
+
+.btn-delete{
+    background:red;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+th, td{
+    border:1px solid #999;
+    padding:10px;
+    text-align:center;
+}
+
+th{
+    background:#ddd;
+}
+
+/* POPUP */
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup{
+    width:320px;
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    position:relative;
+    animation:popup 0.2s ease;
+}
+
+@keyframes popup{
+    from{
+        transform:scale(0.8);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+.popup h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.popup input{
+    width:100%;
+    margin-bottom:10px;
+}
+
+.fechar{
+    position:absolute;
+    right:10px;
+    top:10px;
+    width:25px;
+    height:25px;
+    border:none;
+    background:red;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.popup button{
+    width:100%;
+    margin-top:10px;
+}

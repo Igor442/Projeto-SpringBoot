@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js"></script>
+<head>
+<title>Sistema de Produtos</title>
+</head>
+<body>
+<div class="container">
+
+    <div class="topo">
+
+        <div class="left">
+            <input type="text" placeholder="Pesquisar">
+        </div>
+
+        <div class="right">
+            <button class="btn-add" onclick="abrirPopup('popupAdd')">
+                +Adicionar
+            </button>
+
+            <button class="btn-edit" onclick="abrirPopup('popupEdit')">
+                Editar
+            </button>
+
+            <button class="btn-delete" onclick="abrirPopup('popupDelete')">
+                Excluir
+            </button>
+        </div>
+
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Preço</th>
+                <th>Quantidade</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Dorflex</td>
+                <td>5,99</td>
+                <td>49</td>
+                <td>Remédio</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+
+<!-- POPUP ADICIONAR -->
+
+<div class="overlay" id="popupAdd">
+
+    <div class="popup">
+
+        <button class="fechar" onclick="fecharPopup('popupAdd')">
+            X
+        </button>
+
+        <h2>Adicionar Produto</h2>
+
+        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Preço">
+        <input type="text" placeholder="Quantidade">
+        <input type="text" placeholder="Tipo">
+
+        <button class="btn-add">
+            Adicionar Produto
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POPUP EDITAR -->
+
+<div class="overlay" id="popupEdit">
+
+    <div class="popup">
+
+        <button class="fechar" onclick="fecharPopup('popupEdit')">
+            X
+        </button>
+
+        <h2>Editar Produto</h2>
+
+        <input type="text" placeholder="Nome">
+        <input type="text" placeholder="Preço">
+        <input type="text" placeholder="Quantidade">
+        <input type="text" placeholder="Tipo">
+
+        <button class="btn-edit">
+            Editar Produto
+        </button>
+
+    </div>
+
+</div>
+
+<!-- POPUP EXCLUIR -->
+
+<div class="overlay" id="popupDelete">
+
+    <div class="popup">
+
+        <button class="fechar" onclick="fecharPopup('popupDelete')">
+            X
+        </button>
+
+        <h2>Excluir Produto</h2>
+
+        <input type="text" placeholder="Digite o ID do produto">
+
+        <button class="btn-delete">
+            Excluir Produto
+        </button>
+
+    </div>
+
+</div>
+</body>
+</html>
