@@ -71,6 +71,13 @@ table{
     margin-top:10px;
 }
 
+.table-wrapper{
+    max-height:320px;
+    overflow-y:auto;
+    border:1px solid #999;
+    border-radius:5px;
+}
+
 th, td{
     border:1px solid #999;
     padding:10px;
@@ -80,8 +87,6 @@ th, td{
 th{
     background:#ddd;
 }
-
-/* POPUP */
 
 .overlay{
     position:fixed;
@@ -100,6 +105,22 @@ th{
     background:white;
     border-radius:10px;
     padding:20px;
+}
+
+.btn-container{
+    display:flex;
+    gap:10px;
+    margin-top:15px;
+    flex-direction:row-reverse;
+}
+
+.btn-container button{
+    flex:1;
+    padding:10px;
+}
+
+.btn-cancel{
+    background:#999 !important;
     position:relative;
     animation:popup 0.2s ease;
 }
@@ -121,24 +142,29 @@ th{
 }
 
 .popup input{
-    width:100%;
+    width:100%; 
     margin-bottom:10px;
 }
 
 .fechar{
-    position:absolute;
-    right:10px;
-    top:10px;
-    width:25px;
-    height:25px;
-    border:none;
-    background:red;
-    color:white;
-    border-radius:5px;
+    width: 10%;
+    height: auto;
+    margin: 10px 10px 10px 10px;
+    padding: 0px 0px 0px 0px;
+    color: rgb(255, 255, 255);
+    background-color: red;
     cursor:pointer;
 }
 
 .popup button{
     width:100%;
     margin-top:10px;
+}
+
+.btn-action-edit {
+    background: #00a2ff !important;
+    padding: 5px 10px !important;
+    font-size: 12px !important;
+    width: auto !important;
+    margin: 0 !important;
 }

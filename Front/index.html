@@ -7,120 +7,94 @@
 </head>
 <body>
 <div class="container">
-
     <div class="topo">
-
         <div class="left">
-            <input type="text" placeholder="Pesquisar">
+            <input type="text" id="pesquisa" placeholder="Pesquisar por nome" onkeyup="filtrarProdutos()">
         </div>
-
         <div class="right">
             <button class="btn-add" onclick="abrirPopup('popupAdd')">
                 +Adicionar
             </button>
-
-            <button class="btn-edit" onclick="abrirPopup('popupEdit')">
-                Editar
-            </button>
-
             <button class="btn-delete" onclick="abrirPopup('popupDelete')">
                 Excluir
             </button>
         </div>
-
+    </div>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Tipo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="produtos"></tbody>
+            </table>
+        </div>
     </div>
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Preço</th>
-                <th>Quantidade</th>
-                <th>Tipo</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Dorflex</td>
-                <td>5,99</td>
-                <td>49</td>
-                <td>Remédio</td>
-            </tr>
-        </tbody>
-    </table>
-
-</div>
-
-<!-- POPUP ADICIONAR -->
 
 <div class="overlay" id="popupAdd">
-
+    
     <div class="popup">
 
-        <button class="fechar" onclick="fecharPopup('popupAdd')">
-            X
-        </button>
-
         <h2>Adicionar Produto</h2>
+        <input type="text" id="nomead" placeholder="Digite o nome do produto">
+        <input type="text" id="precoad" placeholder="Preço">
+        <input type="text" id="quantidadead" placeholder="Quantidade">
+        <input type="text" id="tipoad" placeholder="Tipo">
 
-        <input type="text" placeholder="Nome">
-        <input type="text" placeholder="Preço">
-        <input type="text" placeholder="Quantidade">
-        <input type="text" placeholder="Tipo">
-
-        <button class="btn-add">
-            Adicionar Produto
-        </button>
-
+        <div class="btn-container">
+            <button class="btn-add" onclick="enviardados()">
+                Adicionar Produto
+            </button>
+            <button class="btn-cancel" onclick="fecharPopup('popupAdd')">
+                Cancelar
+            </button>
+        </div>
     </div>
-
 </div>
-
-<!-- POPUP EDITAR -->
 
 <div class="overlay" id="popupEdit">
 
     <div class="popup">
 
-        <button class="fechar" onclick="fecharPopup('popupEdit')">
-            X
-        </button>
-
         <h2>Editar Produto</h2>
+        <input type="text" id="idedit" placeholder="ID" disabled>
+        <input type="text" id="nomeedit" placeholder="Nome">
+        <input type="text" id="precoedit" placeholder="Preço">
+        <input type="text" id="quantidadeedit" placeholder="Quantidade">
+        <input type="text" id="tipoedit" placeholder="Tipo">
 
-        <input type="text" placeholder="Nome">
-        <input type="text" placeholder="Preço">
-        <input type="text" placeholder="Quantidade">
-        <input type="text" placeholder="Tipo">
-
-        <button class="btn-edit">
-            Editar Produto
-        </button>
-
+        <div class="btn-container">
+            <button class="btn-edit" onclick="enviardadosedit()">
+                Editar Produto
+            </button>
+            <button class="btn-cancel" onclick="fecharPopup('popupEdit')">
+                Cancelar
+            </button>
+        </div>
     </div>
-
 </div>
-
-<!-- POPUP EXCLUIR -->
 
 <div class="overlay" id="popupDelete">
 
     <div class="popup">
 
-        <button class="fechar" onclick="fecharPopup('popupDelete')">
-            X
-        </button>
-
         <h2>Excluir Produto</h2>
-
-        <input type="text" placeholder="Digite o ID do produto">
-
-        <button class="btn-delete">
-            Excluir Produto
-        </button>
+        <input type="text" id="iddelete" placeholder="Digite o ID do produto">
+        <div class="btn-container">
+            <button class="btn-delete" onclick="enviardadosdelete()">
+                Excluir Produto
+            </button>
+            <button class="btn-cancel" onclick="fecharPopup('popupDelete')">
+                Cancelar
+            </button>
+        </div>
 
     </div>
 
